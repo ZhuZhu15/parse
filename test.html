@@ -1,0 +1,21 @@
+<head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="demo">
+        <table style="border: solid 1px black">
+            <thead>
+                <th v-on:click="sortBy('name')">Name</th>
+                <th v-on:click="sortBy('power')">Power</th>
+            </thead>
+            <tbody>
+                <tr v-for="name in filter_heroes">
+                    <td>{{name.name}}</td>
+                    <td>{{name.power}}</td>
+                </tr>
+            </tbody>
+        </table>
+        {{sortKey}}
+        </div>
+</body>
+<script src="test_app.js"></script>
